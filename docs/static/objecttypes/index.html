@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <title>Objectdefinities – Assetdata</title>
+  <link rel="stylesheet" href="/ils-assetdata/assets/css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<div id="header_wrap">
+  <div class="inner">
+    <a href="/ils-assetdata/index.html" style="text-decoration:none">
+      <h2 id="project_title">Areaaldata 5 – BETA versie bedoeld voor ontwikkeldoeleinden – versie van 24-02-2026
+        </h2>
+      <h3 id="project_tagline">Objecttypes & Keuzelijsten</h3>
+    </a>
+  </div>
+</div>
+
+<div id="main_content_wrap">
+  <div class="inner">
+    <div class="layout">
+      <div class="sidebar"></div>
+      <div class="content">
+<h2>OTL Areaaldata</h2>
+
+<p>
+Op deze pagina wordt de objecttypebibliotheek (OTL) Areaaldata van de
+Provincie Noord-Holland beschikbaar gesteld.
+Deze OTL beschrijft het informatiemodel van Areaaldata en bestaat uit een
+verzameling objecttypen die gezamenlijk het areaal van de provincie
+Noord-Holland beschrijven ten behoeve van het uitvoeren van assetmanagement.
+</p>
+
+<p>
+Vanaf Areaaldata versie 5.0 vormt IMBOR 2022, in combinatie met
+NEN 2767-4, de basis van de objecttypebibliotheek.
+Objecttypen, attributen en keuzelijsten zijn afgeleid van deze standaarden.
+</p>
+
+<p>
+Voor het gebruik en het samenstellen van een datalevering van Areaaldata
+moet de OTL altijd in samenhang met de productspecificatie worden geïnterpreteerd.
+Naast deze online weergave wordt de OTL en het onderliggende informatiemodel
+ook als downloadbare variant beschikbaar gesteld.
+</p>
+
+<h3>Beschikbare downloads</h3>
+<ul>
+  <li>PDF-document – Afgedrukte weergave van het volledige informatiemodel</li>
+  <li>
+  <a href="/ils-assetdata/assets/bestanden/otl_areaaldata.xlsx">
+    Excel-bestand – Overzicht van objecttypen met metadata en attributen
+  </a>
+</li>
+  <li>
+    <a href="/ils-assetdata/assets/bestanden/ad5XML.xml">
+      Workspace XML – In ArcGIS importeerbare versie
+    </a>
+  </li>
+</ul>
+
+<h3>Ontwikkeling</h3>
+<p>
+Het informatiemodel van Areaaldata is continu in ontwikkeling.
+De huidige versie is Areaaldata 5.0.
+Oudere versies en releasenotes zijn beschikbaar via de pagina
+‘Scripts en ondersteunende informatie’.
+</p>
+
+<p>
+Wijzigingen worden kwalitatief beschreven in releasenotes.
+Daarnaast stellen wij ondersteunende vertaaltabellen en een sankey-diagram
+beschikbaar om veranderingen tussen versies inzichtelijk te maken.
+</p>
+
+<h3>Weergaven</h3>
+<p>
+Om de OTL goed leesbaar te maken voor verschillende doelgroepen
+zijn meerdere weergaven beschikbaar.
+Dataleveranciers dienen altijd uit te gaan van de volledige weergave.
+</p>
+
+<ul>
+  <li>
+    <strong>Volledig (PNH dataspecialisten)</strong><br>
+    Alle technische attributen, inclusief herkomst, relaties en leveringsafspraken.<br>
+    <a href="compleet/index.html">Ga naar volledige objectdefinities</a><br><br>
+
+    <label for="objectSearch"><em>Zoek direct:</em></label><br>
+    <input
+      type="text"
+      id="objectSearch"
+      list="objecttypes"
+      placeholder="Typ een objectnaam…"
+      style="width: 100%; max-width: 400px; padding: 6px;"
+    >
+
+    <datalist id="objecttypes"></datalist>
+  </li>
+
+  <br>
+
+  <li>
+    <strong>Publiek</strong><br>
+    Beperkte set kenmerken, bedoeld voor brede communicatie en globaal inzicht.<br>
+    <a href="publiek/index.html">Ga naar publieke objectdefinities</a>
+  </li>
+  
+ <br>
+  
+  <li>
+    <a href="../keuzelijsten/index.html">
+      Overzicht van alle keuzelijsten
+    </a>
+</li>
+
+</ul>
+
+
+
+<h3>Beheer en contact</h3>
+<p>
+Areaaldata en deze website worden beheerd door de unit Data en Informatie
+van de Provincie Noord-Holland.
+Vragen over het uitvoeren van dataleveringen verlopen altijd via de opdrachtgever.
+</p>
+
+<p>
+Voor overige vragen kan contact worden opgenomen via
+<a href="mailto:areaaldata@noord-holland.nl">areaaldata@noord-holland.nl</a>.
+</p>
+
+<script>
+fetch("objecttypes.json")
+  .then(r => r.json())
+  .then(objecten => {
+    const input = document.getElementById("objectSearch");
+    const datalist = document.getElementById("objecttypes");
+
+    objecten.forEach(o => {
+      const option = document.createElement("option");
+      option.value = o;
+      datalist.appendChild(option);
+    });
+
+    input.addEventListener("change", () => {
+      const value = input.value;
+      if (objecten.includes(value)) {
+        window.location.href = "/ils-assetdata/static/objecttypes/compleet/" + value + ".html";
+      }
+    });
+  });
+</script>
+</div>
+    </div>
+  </div>
+</div>
+
+<div id="footer_wrap">
+  <div class="inner">Provincie Noord-Holland</div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  /* =================================================
+     Assetgroepen open/dicht + state onthouden
+     STANDAARD ALLES DICHT
+  ================================================= */
+
+  const STORAGE_KEY = "pnh_assetgroep_state";
+  let state = {};
+
+  try {
+    state = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {};
+  } catch (e) {}
+
+  const assetgroepen = document.querySelectorAll(".assetgroep");
+
+  assetgroepen.forEach(function (groep) {
+    const title = groep.querySelector(".assetgroep-title");
+    if (!title) return;
+
+    const key = title.textContent.trim();
+
+    // ✅ Alleen openen als gebruiker dit eerder deed
+    if (state[key]) {
+      groep.classList.add("open");
+    }
+
+    title.addEventListener("click", function () {
+      const isOpen = groep.classList.toggle("open");
+      state[key] = isOpen;
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    });
+  });
+
+  /* =================================================
+     TABEL SORTEREN (attribuuttabellen)
+  ================================================= */
+
+  document.querySelectorAll(".attribuuttabel").forEach(table => {
+    const ths = table.querySelectorAll("thead th");
+    const tbody = table.querySelector("tbody");
+
+    if (!tbody || ths.length === 0) return;
+
+    ths.forEach((th, colIndex) => {
+      let asc = true;
+
+      th.style.cursor = "pointer";
+      th.title = "Klik om te sorteren";
+
+      th.addEventListener("click", () => {
+        const rows = Array.from(tbody.querySelectorAll("tr"));
+
+        rows.sort((a, b) => {
+          const A = a.children[colIndex]?.innerText.trim() ?? "";
+          const B = b.children[colIndex]?.innerText.trim() ?? "";
+
+          // Numeriek sorteren indien mogelijk
+          const numA = parseFloat(A.replace(",", "."));
+          const numB = parseFloat(B.replace(",", "."));
+
+          if (!isNaN(numA) && !isNaN(numB)) {
+            return asc ? numA - numB : numB - numA;
+          }
+
+          return asc
+            ? A.localeCompare(B, "nl", { sensitivity: "base" })
+            : B.localeCompare(A, "nl", { sensitivity: "base" });
+        });
+
+        // Toggle sorteerrichting
+        asc = !asc;
+
+        // Rijen opnieuw toevoegen
+        rows.forEach(tr => tbody.appendChild(tr));
+
+        // Visuele sorteerindicatie
+        ths.forEach(h => h.classList.remove("sort-asc", "sort-desc"));
+        th.classList.add(asc ? "sort-desc" : "sort-asc");
+      });
+    });
+  });
+
+});
+</script>
+</body>
+</html>

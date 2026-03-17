@@ -1,0 +1,86 @@
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  /* =================================================
+     Assetgroepen open/dicht + state onthouden
+     STANDAARD ALLES DICHT
+  ================================================= */
+
+  const STORAGE_KEY = "pnh_assetgroep_state";
+  let state = {};
+
+  try {
+    state = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {};
+  } catch (e) {}
+
+  const assetgroepen = document.querySelectorAll(".assetgroep");
+
+  assetgroepen.forEach(function (groep) {
+    const title = groep.querySelector(".assetgroep-title");
+    if (!title) return;
+
+    const key = title.textContent.trim();
+
+    // ✅ Alleen openen als gebruiker dit eerder deed
+    if (state[key]) {
+      groep.classList.add("open");
+    }
+
+    title.addEventListener("click", function () {
+      const isOpen = groep.classList.toggle("open");
+      state[key] = isOpen;
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    });
+  });
+
+  /* =================================================
+     TABEL SORTEREN (attribuuttabellen)
+  ================================================= */
+
+  document.querySelectorAll(".attribuuttabel").forEach(table => {
+    const ths = table.querySelectorAll("thead th");
+    const tbody = table.querySelector("tbody");
+
+    if (!tbody || ths.length === 0) return;
+
+    ths.forEach((th, colIndex) => {
+      let asc = true;
+
+      th.style.cursor = "pointer";
+      th.title = "Klik om te sorteren";
+
+      th.addEventListener("click", () => {
+        const rows = Array.from(tbody.querySelectorAll("tr"));
+
+        rows.sort((a, b) => {
+          const A = a.children[colIndex]?.innerText.trim() ?? "";
+          const B = b.children[colIndex]?.innerText.trim() ?? "";
+
+          // Numeriek sorteren indien mogelijk
+          const numA = parseFloat(A.replace(",", "."));
+          const numB = parseFloat(B.replace(",", "."));
+
+          if (!isNaN(numA) && !isNaN(numB)) {
+            return asc ? numA - numB : numB - numA;
+          }
+
+          return asc
+            ? A.localeCompare(B, "nl", { sensitivity: "base" })
+            : B.localeCompare(A, "nl", { sensitivity: "base" });
+        });
+
+        // Toggle sorteerrichting
+        asc = !asc;
+
+        // Rijen opnieuw toevoegen
+        rows.forEach(tr => tbody.appendChild(tr));
+
+        // Visuele sorteerindicatie
+        ths.forEach(h => h.classList.remove("sort-asc", "sort-desc"));
+        th.classList.add(asc ? "sort-desc" : "sort-asc");
+      });
+    });
+  });
+
+});
+</script>

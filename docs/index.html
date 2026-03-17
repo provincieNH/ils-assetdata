@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Leveren Assetdata</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- Donkere bovenbalk -->
+<div id="top_bar"></div>
+
+<!-- Header met PNH-logo -->
+<div id="header_wrap">
+    <div class="inner">
+        <h1 id="project_title">Leveren Assetdata</h1>
+        <h2 id="project_tagline">
+            Documentatie en hulpmiddelen voor Areaaldata en overige datasets
+        </h2>
+    </div>
+</div>
+
+<!-- Content -->
+<div id="main_content_wrap">
+    <div class="inner">
+        <main class="landing-container">
+
+    <!-- Introductietekst -->
+        <h2>Informatieleveringsspecificatie asset data</h2>
+
+        <p>
+            Voor het goed kunnen uitvoeren van het Asset Management dient de Provincie
+            Noord‑Holland te kunnen bouwen op actuele, betrouwbare en complete data van de
+            assets langs de provinciale (vaar)wegen.
+        </p>
+
+        <p>
+            In diverse contracten en opdrachten staat de verwijzing naar specificaties om
+            gegevens aan te leveren. Deze omgeving is ingericht om de specificaties voor het
+            leveren van Areaaldata en overige (geo)data te ontsluiten.
+        </p>
+
+        <p>
+            U kunt via de links hieronder de verschillende specificaties inzien.
+        </p>
+
+            <h3>Areaaldata</h3>
+
+            <p>
+                Areaaldata is voor de provincie Noord‑Holland dé dataset waarin gegevens van assets
+                worden bijgehouden, maar ook waaruit uitwisseling plaatsvindt met landelijke registraties
+                zoals de Basisregistratie Grootschalige Topografie (BGT) en de Kabels en Leidingen
+                Informatie (KLIC). De laatste versie is Areaaldata 5.0 met verwachtte releasedatum:
+<strong><span id="release-datum"></span></strong>.
+            </p>
+
+            <p>
+                Hoe Areaaldata is opgebouwd en welke regels gelden voor het opbouwen en uitwisselen,
+                staat beschreven in de
+                <a href="#tile-productspecificatie">productspecificatie</a>.
+                In de
+                <a href="#tile-otl">objecttypebibliotheek (Object Type Library, OTL)</a>
+                staat het datamodel met definities van objecttypen en attributen weergegeven.
+                De provincie stelt daarnaast ook
+                <a href="#tile-scripts">ondersteunende scripts en documentatie</a>
+                beschikbaar.
+            </p>
+
+            <p>
+                Een beperkte versie van Areaaldata is inzichtelijk via onze webviewer.
+            </p>
+
+            <h3>Overige datasets</h3>
+
+            <p>
+                Naast Areaaldata zijn er ook datamodellen en specificaties opgesteld voor andere datasets,
+                waaronder peilgegevens (hydrografie) en verkeersintensiteiten.
+            </p>
+
+            <h3>Beheer</h3>
+
+            <p>
+                Areaaldata en deze website worden beheerd door de unit Data en Informatie van de
+                Provincie Noord‑Holland. Vragen in relatie tot het uitvoeren van dataleveringen verlopen
+                altijd via de opdrachtgever. Voor overige vragen kan contact worden opgenomen via
+                <a href="mailto:Areaaldata@noord-holland.nl">Areaaldata@noord-holland.nl</a>.
+            </p>
+
+            <!-- Tegels -->
+            <section class="tile-grid">
+
+                <a id="tile-productspecificatie"
+   href="static/productspecificatie/"
+   class="tile">
+                    <h2>Productspecificatie Areaaldata 5.0</h2>
+                    <p>Inhoud, structuur en eisen voor het leveren van Areaaldata.</p>
+                </a>
+
+                <a id="tile-otl"
+   href="static/objecttypes/"
+   class="tile">
+                    <h2>Objecttypebibliotheek Areaaldata 5.0</h2>
+                    <p>Datamodel van Areaaldata, met definities, metadata en attribuutbeschrijving.</p>
+                </a>
+
+                <a id="tile-scripts"
+   href="static/scripts_en_ondersteuning/"
+   class="tile">
+                    <h2>Scripts en ondersteunende informatie</h2>
+                    <p>Dataleveringscontroletool</p>
+                    <p>Releasenotes</p>
+                    <p>Oude versies</p>
+                </a>
+
+                <a href="static/overige_datasets/" class="tile">
+                    <h2>Overige datasets</h2>
+                    <p>Datamodellen en specificaties buiten Areaaldata.</p>
+                </a>
+
+                <a id="tile-areaalviewer"
+               href="https://geoapps.noord-holland.nl/app/areaal"
+               class="tile"
+               target="_blank"
+               rel="noopener">
+                <h2>Areaalviewer 4.3</h2>
+                <p>Interactieve webviewer voor het raadplegen van Areaaldata op de kaart.</p>
+                </a>
+
+            </section>
+        </main>
+
+    </div>
+</div>
+
+<!-- Footer -->
+<div id="footer_wrap">
+    <div class="inner">
+        Provincie Noord‑Holland
+    </div>
+</div>
+<script>
+  const releaseDatum = "24 april 2026";  // ← hier alleen aanpassen
+  document.getElementById("release-datum").textContent = releaseDatum;
+</script>
+</body>
+</html>

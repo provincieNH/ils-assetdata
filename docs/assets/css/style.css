@@ -123,29 +123,6 @@ a:hover {
 /* ----------------------------------------------------
    Sidebar
 ---------------------------------------------------- */
-.doc-header {
-background:#003366;
-color:white;
-padding:20px 40px;
-}
-
-.header-inner {
-max-width:1500px;
-margin:auto;
-display:flex;
-justify-content:space-between;
-align-items:center;
-}
-
-.download-btn {
-background:white;
-color:#003366;
-padding:10px 16px;
-border-radius:4px;
-text-decoration:none;
-font-weight:600;
-}
-
 .download-btn:hover {
 background:#f0f0f0;
 }

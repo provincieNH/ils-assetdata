@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7358f285-0621-4027-839a-addfadfd49cf" name="Changes" comment="gd-12354 #comment  correctie">
-      <change beforePath="$PROJECT_DIR$/docs/static/scripts_en_ondersteuning/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/static/scripts_en_ondersteuning/index.html" afterDir="false" />
+    <list default="true" id="7358f285-0621-4027-839a-addfadfd49cf" name="Changes" comment="gd-12354 #comment  Nieuwste versie!">
+      <change afterPath="$PROJECT_DIR$/docs/static/productspecificatie/_index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/static/productspecificatie/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/static/productspecificatie/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,38 +73,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1769036585202</updated>
-    </task>
-    <task id="LOCAL-00024" summary="GD-12520 #comment argh">
-      <option name="closed" value="true" />
-      <created>1769114314554</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1769114314554</updated>
-    </task>
-    <task id="LOCAL-00025" summary="GD-12520 #comment argh">
-      <option name="closed" value="true" />
-      <created>1769114592935</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1769114592935</updated>
-    </task>
-    <task id="LOCAL-00026" summary="GD-12520 #comment argh">
-      <option name="closed" value="true" />
-      <created>1769114880266</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1769114880266</updated>
-    </task>
-    <task id="LOCAL-00027" summary="GD-12520 #comment argh">
-      <option name="closed" value="true" />
-      <created>1769115252264</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1769115252264</updated>
     </task>
     <task id="LOCAL-00028" summary="GD-12520 #comment argh">
       <option name="closed" value="true" />
@@ -464,7 +434,39 @@
       <option name="project" value="LOCAL" />
       <updated>1773748128252</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="gd-12354 #comment  correctie">
+      <option name="closed" value="true" />
+      <created>1773750666640</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1773750666640</updated>
+    </task>
+    <task id="LOCAL-00074" summary="gd-12354 #comment  correctie">
+      <option name="closed" value="true" />
+      <created>1773751483949</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1773751483949</updated>
+    </task>
+    <task id="LOCAL-00075" summary="gd-12354 #comment  correctie">
+      <option name="closed" value="true" />
+      <created>1773751591021</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1773751591021</updated>
+    </task>
+    <task id="LOCAL-00076" summary="gd-12354 #comment  Nieuwste versie!">
+      <option name="closed" value="true" />
+      <created>1774360530942</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1774360530942</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -479,7 +481,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="gd-12352 #comment breedte kolommen fixeren" />
     <MESSAGE value="gd-12352 #comment poging sticky headers" />
     <MESSAGE value="gd-12705 #comment picto's toegevoegd." />
     <MESSAGE value="gd-12717 #comment opruiming" />
@@ -504,6 +505,7 @@
     <MESSAGE value="gd-12354 #comment nog geen hyperlink voor overige datasets" />
     <MESSAGE value="gd-12354 #comment  overige datasets" />
     <MESSAGE value="gd-12354 #comment  correctie" />
-    <option name="LAST_COMMIT_MESSAGE" value="gd-12354 #comment  correctie" />
+    <MESSAGE value="gd-12354 #comment  Nieuwste versie!" />
+    <option name="LAST_COMMIT_MESSAGE" value="gd-12354 #comment  Nieuwste versie!" />
   </component>
 </project>

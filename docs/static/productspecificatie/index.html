@@ -1,64 +1,147 @@
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
-  <meta charset="utf-8">
-  <title>Productspecificatie Areaaldata 5.0 – Assetdata</title>
-  <link rel="stylesheet" href="/Leveren_Assetdata/assets/css/style.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<title>Productspecificatie Areaaldata 5.0</title>
+
+<link rel="stylesheet" href="assets/css/style.css">
+
+<style>
+
+body{
+    margin:0;
+    display:flex;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* linkernavigatie */
+
+#sidebar{
+    width:300px;
+    height:100vh;
+    overflow-y:auto;
+    background:#f5f5f5;
+    border-right:1px solid #ddd;
+    padding:20px;
+    position:fixed;
+}
+
+#sidebar h2{
+    font-size:18px;
+    margin-top:0;
+}
+
+#sidebar ul{
+    list-style:none;
+    padding-left:0;
+}
+
+#sidebar li{
+    margin:6px 0;
+}
+
+#sidebar a{
+    text-decoration:none;
+    color:#003366;
+}
+
+/* content */
+
+#content{
+    margin-left:320px;
+    padding:40px;
+    max-width:1000px;
+}
+
+h1{
+    margin-top:0;
+}
+
+</style>
+
 </head>
+
 <body>
 
-<div id="header_wrap">
-  <div class="inner">
-    <a href="/Leveren_Assetdata/index.html" style="text-decoration:none">
-      <h2 id="project_title">
-        Areaaldata 5 – BETA versie bedoeld voor ontwikkeldoeleinden
-      </h2>
-      <h3 id="project_tagline">Productspecificatie</h3>
-    </a>
-  </div>
-</div>
+<nav id="sidebar">
 
-<div id="main_content_wrap">
-  <div class="inner">
-    <div class="layout">
-      <div class="sidebar">
-        <!-- bewust leeg -->
-      </div>
+<h2>Inhoud</h2>
 
-      <div class="content">
-        <h2>Productspecificatie Areaaldata 5.0</h2>
+<ul>
 
-        <p>
-          Dit is de reviewversie van de productspecificatie van Areaaldata 5.0.
-          In dit document zijn de afspraken vastgelegd voor het samenstellen en
-          aanleveren van dataleveringen voor Areaaldata.
-        </p>
+<li><a href="#inleiding">1 Inleiding</a></li>
 
-        <p>
-          De productspecificatie moet altijd in samenhang met de
-          objecttypebibliotheek (OTL) worden gebruikt.
-        </p>
+<li><a href="#productomschrijving">2 Productomschrijving Areaaldata</a>
+<ul>
+<li><a href="#areaaldata">2.1 Areaaldata</a></li>
+<li><a href="#geometrie">2.2 Geometrietype</a></li>
+<li><a href="#topologie">2.3 Topologie</a></li>
+</ul>
+</li>
 
-        <h3>Eerste versie</h3>
-        <p>
-          De eerste conceptversie van de productspecificatie is beschikbaar via
-          onderstaande link:
-        </p>
+<li><a href="#producteisen">3 Producteisen Areaaldata</a></li>
 
-        <p>
-          <a href="/Leveren_Assetdata/assets/bestanden/Productspecificatie Areaaldata 5.0 concept ter review.docx">
-            Productspecificatie Areaaldata 5.0 – concept ter review (DOCX)
-          </a>
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
+<li><a href="#aanleverproces">4 Aanleverproces</a></li>
 
-<div id="footer_wrap">
-  <div class="inner">Provincie Noord-Holland</div>
-</div>
+</ul>
+
+</nav>
+
+<main id="content">
+
+<h1>Productspecificatie Areaaldata 5.0</h1>
+
+<p>
+Grootschalige topografie en areaalinformatie Provincie Noord-Holland
+</p>
+
+<h2 id="inleiding">1 Inleiding</h2>
+
+<p>
+Deze productspecificatie beschrijft de eisen en richtlijnen voor het opstellen en aanleveren van revisiebestanden voor Areaaldata.
+Areaaldata is voor de Provincie Noord‑Holland de centrale dataset voor het vastleggen en beheren van geografische assetgegevens.
+</p>
+
+<p>
+Daarnaast vormt Areaaldata de basis voor gegevensuitwisseling met landelijke registraties zoals de Basisregistratie Grootschalige Topografie (BGT) en het Kabels en Leidingen Informatie Centrum (KLIC).
+</p>
+
+<h2 id="productomschrijving">2 Productomschrijving Areaaldata</h2>
+
+<h3 id="areaaldata">2.1 Areaaldata</h3>
+
+<p>
+Areaaldata is een objectgericht geografisch model dat de openbare ruimte van provinciale wegen en vaarwegen beschrijft.
+</p>
+
+<h3 id="geometrie">2.2 Geometrietype</h3>
+
+<p>
+Objecten worden vastgelegd als punt-, lijn- of vlakobjecten afhankelijk van het objecttype.
+</p>
+
+<h3 id="topologie">2.3 Topologie en relatieve hoogteligging</h3>
+
+<p>
+Objecten moeten voldoen aan de topologische regels van de Basisregistratie Grootschalige Topografie.
+</p>
+
+<h2 id="producteisen">3 Producteisen Areaaldata</h2>
+
+<p>
+Het revisiebestand moet voldoen aan eisen met betrekking tot bestandsopbouw, nauwkeurigheid,
+puntdichtheid, attributen, volledigheid en topologie.
+</p>
+
+<h2 id="aanleverproces">4 Aanleverproces</h2>
+
+<p>
+Het uitwisselen van Areaaldata volgt een proces waarbij de provincie een export levert,
+de dataleverancier mutaties uitvoert en een revisiebestand retourneert.
+</p>
+
+</main>
 
 </body>
 </html>

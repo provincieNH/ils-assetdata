@@ -27,7 +27,7 @@ body {
 /* Links */
 a {
   color: var(--pnh-darkblue);
-  text-decoration: none;
+  text-decoration: italic;
 }
 
 a:hover {

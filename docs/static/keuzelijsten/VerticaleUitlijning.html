@@ -2,7 +2,7 @@
 <html lang="nl">
 <head>
   <meta charset="utf-8">
-  <title>nummeraanduiding_a – Assetdata</title>
+  <title>Keuzelijst VerticaleUitlijning – Assetdata</title>
   <link rel="stylesheet" href="/ils-assetdata/assets/css/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -268,22 +268,37 @@
 <a href="/ils-assetdata/static/objecttypes/compleet/wegvak_v.html">wegvak_v</a>
 <a href="/ils-assetdata/static/objecttypes/compleet/zitelement_p.html">zitelement_p</a>
 </div></div>
-      <div class="content"><h2>AREAALDATA.nummeraanduiding_a</h2>
-<p>* __Muteren toegestaan:__</p>
-<details class='definitieblok' open><summary>Metadata</summary><dl>
-<dt>Areaaldata model versie</dt><dd>5</dd>
-<dt>Assetgroep</dt><dd>Overig</dd>
-<dt>Feature dataset</dt><dd>n.v.t</dd>
-<dt>Herkomst Definitie</dt><dd>IMBOR 2022</dd>
-<dt>Positionele nauwkeurigheid</dt><dd>n.v.t</dd>
-<dt>Geometrie</dt><dd>n.v.t</dd>
-<dt>Definitie</dt><dd>Door het bevoegde gemeentelijke orgaan als zodanig toegekende aanduiding van een verblijfsobject of een benoemde plaats. Nummeraanduiding maakt samen met woonplaats en openbare ruimte het officiële adres. Een nummeraanduiding is gelegen aan een openbare ruimte en heeft daartoe een verwijzing naar deze gerelateerde openbare ruimte.</dd>
-<dt>MappingBGT</dt><dd>x</dd>
-<dt>Heeft Z-waarden</dt><dd>DISABLED</dd>
-<dt>Heeft M-waarden</dt><dd>DISABLED</dd>
-<dt>Herkomst URI</dt><dd><a href="https://data.crow.nl/imbor/def/9c591d90-3066-4ae5-9a37-e6da2078263b" target="_blank">https://data.crow.nl/imbor/def/9c591d90-3066-4ae5-9a37-e6da2078263b</a></dd>
-</dl></details>
-<table class='attribuuttabel'><thead><tr><th>Attribuut</th><th>Alias</th><th>Datatype</th><th>Oorsprong</th><th>Superklasse</th><th>Attribuuttype</th><th>Enumeratie/Referentie</th><th>Verwijzende sleutel</th><th>Standaardwaarde</th><th>Nullable</th><th>Definitie</th><th class="levering-header">Leveren door Projectaannemer</th><th class="levering-header">Leveren door Onderhoudsaannemer</th></tr></thead><tbody><tr><td>annotatie_id</td><td>annotatie id</td><td>LONG(10,0)</td><td>PNH</td><td> Annotatie</td><td> Vrij invoerveld</td><td> </td><td> </td><td> Default: None</td><td> NULLABLE</td><td> Identificatie van de annotatie</td><td> ntb</td><td> ntb</td></tr><tr><td>annotatie_status</td><td>annotatie status</td><td>TEXT(255,0)</td><td>PNH</td><td> Annotatie</td><td> Enumeratie/Referentie</td><td><a href="../../keuzelijsten/AnnotatieStatus.html">AnnotatieStatus</a></td><td> </td><td> Default: None</td><td> NULLABLE</td><td> Status van het label</td><td> ntb</td><td> ntb</td></tr><tr><td>bag_hoogste_huisnummers</td><td>bag hoogste huisnummers</td><td>TEXT(255,0)</td><td>PNH</td><td> Annotatie</td><td> Vrij invoerveld</td><td> </td><td> </td><td> Default: None</td><td> NULLABLE</td><td> Identificatie in de BAG registratie van het verblijfsobject met het hoogste huisnummer behorende tot de reeks.</td><td> ntb</td><td> ntb</td></tr><tr><td>bag_laagste_huisnummers</td><td>bag laagste huisnummers</td><td>TEXT(255,0)</td><td>PNH</td><td> Annotatie</td><td> Vrij invoerveld</td><td> </td><td> </td><td> Default: None</td><td> NULLABLE</td><td> Identificatie in de BAG registratie van het verblijfsobject met het laagste huisnummer behorende tot de reeks.</td><td> ntb</td><td> ntb</td></tr><tr><td>feature_id</td><td>feature id</td><td>LONG(10,0)</td><td>PNH</td><td> Annotatie</td><td> Vrij invoerveld</td><td> </td><td> </td><td> Default: None</td><td> NULLABLE</td><td> Objectid van het beheerobject waar de annotatie betrekking op heeft</td><td> ntb</td><td> ntb</td></tr><tr><td>horizontale_uitlijning</td><td>horizontale uitlijning</td><td>TEXT(255,0)</td><td>PNH</td><td> Annotatie</td><td> Enumeratie/Referentie</td><td><a href="../../keuzelijsten/HorizontaleUitlijning.html">HorizontaleUitlijning</a></td><td> </td><td> Default: None</td><td> NULLABLE</td><td> Positie van de horizontale uitlijning</td><td> ntb</td><td> ntb</td></tr><tr><td>identificatie</td><td>bgt identificatie</td><td>TEXT(255,0)</td><td>IMBOR</td><td> Annotatie</td><td> GUID</td><td> </td><td> </td><td> Default: None</td><td> NULLABLE</td><td> Uniek nummer van het object (GUID), een numerieke identificatie. Conform NEN3610 zijn identificatiecodes persistent: ze wijzigen niet gedurende de levensduur van een object</td><td> Nee</td><td> Nee</td></tr><tr><td>karakterbreedte</td><td>karakterbreedte</td><td>LONG(10,0)</td><td>PNH</td><td> Annotatie</td><td> Vrij invoerveld</td><td> </td><td> </td><td> Default: None</td><td> NULLABLE</td><td> Aanduiding wat de breedte van de karakters in het label moet zijn</td><td> ntb</td><td> ntb</td></tr><tr><td>karakterspreiding</td><td>karakterspreiding</td><td>LONG(10,0)</td><td>PNH</td><td> Annotatie</td><td> Vrij invoerveld</td><td> </td><td> </td><td> Default: None</td><td> NULLABLE</td><td> Aanduiding wat de ruimte tussen de karakters in het label moet zijn</td><td> ntb</td><td> ntb</td></tr><tr><td>lettertype</td><td>lettertype</td><td>TEXT(255,0)</td><td>PNH</td><td> Annotatie</td><td> Vrij invoerveld</td><td> </td><td> </td><td> Default: None</td><td> NULLABLE</td><td> Lettertype wat gebruikt moet worden</td><td> Ja</td><td> Ja</td></tr><tr><td>lettertype_hoogte</td><td>lettertype hoogte</td><td>TEXT(255,0)</td><td>PNH</td><td> Annotatie</td><td> Vrij invoerveld</td><td> </td><td> </td><td> Default: None</td><td> NULLABLE</td><td> Hoogte van het lettertype wat gebruikt moet worden</td><td> Ja</td><td> Ja</td></tr><tr><td>lettertype_vervolg</td><td>lettertype vervolg</td><td>TEXT(3,0)</td><td>PNH</td><td> Annotatie</td><td> Ja/Nee</td><td> </td><td> </td><td> Default: None</td><td> NULLABLE</td><td> Aanduiding of er een volgend lettertype wat gebruikt moet worden</td><td> Ja</td><td> Ja</td></tr><tr><td>mag_overschreven_worden</td><td>mag overschreven worden</td><td>LONG(10,0)</td><td>PNH</td><td> Annotatie</td><td> Vrij invoerveld</td><td> </td><td> </td><td> Default: None</td><td> NULLABLE</td><td> Aanduiding of een annotatie definitief is</td><td> ntb</td><td> ntb</td></tr><tr><td>onderstreept</td><td>onderstreept</td><td>TEXT(3,0)</td><td>PNH</td><td> Annotatie</td><td> Ja/Nee</td><td> </td><td> </td><td> Default: None</td><td> NULLABLE</td><td> Aanduiding of het label onderstreept (underline) moet zijn</td><td> ntb</td><td> ntb</td></tr><tr><td>rotatiehoek</td><td>rotatiehoek</td><td>LONG(10,0)</td><td>PNH</td><td> Annotatie</td><td> Vrij invoerveld</td><td> </td><td> </td><td> Default: None</td><td> NULLABLE</td><td> De rotatie van het label bij visualisatie, met de klok mee ten opzichte van de normale tekstrichting.</td><td> ntb</td><td> ntb</td></tr><tr><td>schuingedrukt</td><td>schuingedrukt</td><td>TEXT(3,0)</td><td>PNH</td><td> Annotatie</td><td> Ja/Nee</td><td> </td><td> </td><td> Default: None</td><td> NULLABLE</td><td> Aanduiding of het label schuingedrukt (italics) moet zijn</td><td> ntb</td><td> ntb</td></tr><tr><td>spiegel_hoek</td><td>spiegel hoek</td><td>LONG(10,0)</td><td>PNH</td><td> Annotatie</td><td> Vrij invoerveld</td><td> </td><td> </td><td> Default: None</td><td> NULLABLE</td><td> De specifieke hoek ten opzichte van de verticale as waarop tekst gedraaid of gespiegeld wordt voor betere leesbaarheid of positionering</td><td> ntb</td><td> ntb</td></tr><tr><td>symbool_id</td><td>symbool id</td><td>LONG(10,0)</td><td>PNH</td><td> Annotatie</td><td> Vrij invoerveld</td><td> </td><td> </td><td> Default: None</td><td> NULLABLE</td><td> Identificatie van het symbool</td><td> ntb</td><td> ntb</td></tr><tr><td>tekst</td><td>tekst</td><td>TEXT(255,0)</td><td>IMBOR</td><td> Annotatie</td><td> Vrij invoerveld</td><td> </td><td> </td><td> Default: None</td><td> NULLABLE</td><td> Labeltekst</td><td> ntb</td><td> ntb</td></tr><tr><td>verticale_uitlijning</td><td>verticale uitlijning</td><td>TEXT(255,0)</td><td>PNH</td><td> Annotatie</td><td> Enumeratie/Referentie</td><td><a href="../../keuzelijsten/VerticaleUitlijning.html">VerticaleUitlijning</a></td><td> </td><td> Default: None</td><td> NULLABLE</td><td> Positie van de verticale uitlijning</td><td> ntb</td><td> ntb</td></tr><tr><td>vetgedrukt</td><td>vetgedrukt</td><td>TEXT(3,0)</td><td>PNH</td><td> Annotatie</td><td> Ja/Nee</td><td> </td><td> </td><td> Default: None</td><td> NULLABLE</td><td> Aanduiding of het label vetgedrukt (bold) moet zijn</td><td> ntb</td><td> ntb</td></tr><tr><td>woordspreiding</td><td>woordspreiding</td><td>LONG(10,0)</td><td>PNH</td><td> Annotatie</td><td> Vrij invoerveld</td><td> </td><td> </td><td> Default: None</td><td> NULLABLE</td><td> Aanduiding hoe groot de ruimte tussen woorden in het label moet zijn</td><td> ntb</td><td> ntb</td></tr><tr><td>x_offset</td><td>x offset</td><td>DOUBLE(10,3)</td><td>PNH</td><td> Annotatie</td><td> Vrij invoerveld</td><td> </td><td> </td><td> Default: None</td><td> NULLABLE</td><td> Verplaatsing van het label tov de geometrische positie op de horizontale as</td><td> ntb</td><td> ntb</td></tr><tr><td>y_offset</td><td>y offset</td><td>DOUBLE(10,3)</td><td>PNH</td><td> Annotatie</td><td> Vrij invoerveld</td><td> </td><td> </td><td> Default: None</td><td> NULLABLE</td><td> Verplaatsing van het label tov de geometrische positie op de verticale as</td><td> ntb</td><td> ntb</td></tr><tr><td>z_order</td><td>z order</td><td>TEXT(255,0)</td><td>PNH</td><td> Annotatie</td><td> Vrij invoerveld</td><td> </td><td> </td><td> Default: None</td><td> NULLABLE</td><td> Verticale volgorde</td><td> ntb</td><td> ntb</td></tr></tbody></table></div>
+      <div class="content"><h2>VerticaleUitlijning</h2>
+<p><strong>Domeinlijst versie:</strong> d5</p>
+<p><strong>Herkomst definitie:</strong> PNH</p>
+<p><strong>Type veld:</strong> TEXT</p>
+<table class='attribuuttabel'>
+<thead><tr>
+<th>Code</th>
+<th>Description</th>
+<th>Definitie__	</th>
+</tr></thead><tbody>
+<tr>
+<td>0</td>
+<td>Top</td>
+<td>x</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Center</td>
+<td>x</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Baseline</td>
+<td>x</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Bottom</td>
+<td>x</td>
+</tr>
+</tbody></table></div>
     </div>
   </div>
 </div>

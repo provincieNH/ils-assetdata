@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7358f285-0621-4027-839a-addfadfd49cf" name="Changes" comment="gd-12354 #comment hyperlink opmaak teruggedraaid">
+    <list default="true" id="7358f285-0621-4027-839a-addfadfd49cf" name="Changes" comment="GD-12354 #comment versie 3">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,7 +31,7 @@
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
     "url": "https://github.com/provincieNH/ils-assetdata.git",
-    "accountId": "4dae2237-f507-4b03-be70-3b253dd05864"
+    "accountId": "66bfd1a1-21a1-4ba9-82fd-764cf16cbc73"
   }
 }]]></component>
   <component name="ProjectColorInfo">{
@@ -45,7 +45,6 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "DefaultHtmlFileTemplate": "HTML File",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
@@ -72,14 +71,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1769036585202</updated>
-    </task>
-    <task id="LOCAL-00032" summary="GD-12520 #comment argh">
-      <option name="closed" value="true" />
-      <created>1769119127505</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1769119127505</updated>
     </task>
     <task id="LOCAL-00033" summary="GD-12520 #comment argh">
       <option name="closed" value="true" />
@@ -465,7 +456,15 @@
       <option name="project" value="LOCAL" />
       <updated>1774537437280</updated>
     </task>
-    <option name="localTasksCounter" value="81" />
+    <task id="LOCAL-00081" summary="GD-12354 #comment versie 3">
+      <option name="closed" value="true" />
+      <created>1774860649119</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1774860649119</updated>
+    </task>
+    <option name="localTasksCounter" value="82" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -480,7 +479,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="gd-12717 #comment productspecificaite" />
     <MESSAGE value="gd-12717 #comment jekylloosheid" />
     <MESSAGE value="gd-12717 #comment Tegelteksten overeenkomstig gemaakt met MvB voorstellen" />
     <MESSAGE value="gd-12717 #comment Inleidinde tekst toegevoegd." />
@@ -505,6 +503,7 @@
     <MESSAGE value="gd-12354 #comment  overbodige styling eruit" />
     <MESSAGE value="gd-12354 #comment hyperlink opmaak cursief?" />
     <MESSAGE value="gd-12354 #comment hyperlink opmaak teruggedraaid" />
-    <option name="LAST_COMMIT_MESSAGE" value="gd-12354 #comment hyperlink opmaak teruggedraaid" />
+    <MESSAGE value="GD-12354 #comment versie 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="GD-12354 #comment versie 3" />
   </component>
 </project>
